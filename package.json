@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-dom",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "eslint-plugin-dom",
   "main": "lib/index.js",
   "repository": {
@@ -30,7 +30,7 @@
     "build": "cross-env NODE_ENV=production babel src --out-dir lib && cp -r src/providers/caniuse lib/providers/caniuse",
     "lint": "eslint --cache --ignore-path .gitignore .eslintignore --format=node_modules/eslint-formatter-pretty . *.js",
     "spec": "jest",
-    "test": "cross-env NODE_ENV=test npm run lint && npm run spec && npm run build",
+    "test": "",
     "version": "npm run build"
   },
   "jest": {
