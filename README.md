@@ -7,3 +7,17 @@ eslint-plugin-dom
 [![npm](https://img.shields.io/npm/dm/eslint-plugin-dom.svg)](https://npm-stat.com/charts.html?package=eslint-plugin-dom)
 
 **⚠️ WORK IN PROGRESS ⚠️**
+
+## Installation
+```bash
+npm install --save-dev eslint-plugin-dom
+```
+
+Add `'dom'` to `.eslintrc` plugins section:
+```js
+// .eslintrc
+{
+  // ...
+  plugins: ['dom']
+}
+```
