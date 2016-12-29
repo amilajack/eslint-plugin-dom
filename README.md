@@ -7,3 +7,22 @@ eslint-plugin-dom
 [![npm](https://img.shields.io/npm/dm/eslint-plugin-dom.svg)](https://npm-stat.com/charts.html?package=eslint-plugin-dom)
 
 **⚠️ WORK IN PROGRESS ⚠️**
+
+## Goals
+ - Use static analysis to detect forced reflow. Suggest requestAnimationFrame
+ - Warn when using forcing sync layout calculation (ex. offsetLeft)
+
+## Idea
+```
+ 22:  const elem = document.querySelector('.some')
+ 23:  elem.offsetLeft
+           ^^^^^^^^^^   `offsetLeft` will trigger synchronous style and layout calculation
+```
+
+```
+ 34:  const h1 = element1.clientHeight;
+ 35:  element1.style.height = `${h1 * 2}px`;
+ 36:  const h2 = element2.clientHeight;
+                 ^^^^^^^^^^^^^^^^^^^^^^  Forced reflow will occur. Layout invalidated at line 35.
+                                         Use requestAnimationFrame() to prevent this
+```
