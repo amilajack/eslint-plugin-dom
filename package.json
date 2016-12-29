@@ -9,12 +9,13 @@
   },
   "keywords": [
     "eslint",
-    "browser",
-    "support",
-    "api",
-    "lint",
-    "caniuse",
-    "kangax"
+    "dom",
+    "perf",
+    "reflow",
+    "layout",
+    "trash",
+    "performance",
+    "lint"
   ],
   "author": "Amila Welihinda",
   "license": "MIT",
