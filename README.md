@@ -11,6 +11,7 @@ eslint-plugin-dom
 ## Goals
  - Use static analysis to detect forced reflow. Suggest requestAnimationFrame
  - Warn when using forcing sync layout calculation (ex. offsetLeft)
+ - Warn against general perf issues, ex. `document.write()`
 
 ## Idea
 ```
